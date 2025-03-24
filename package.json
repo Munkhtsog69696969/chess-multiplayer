@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" src/server.ts",
-    "clean": "rimraf dist",
-    "build": "npm run clean && tsc && npx prisma generate",
+    "clean": "rm -rf dist",
+    "build": "tsc && npx prisma generate",
     "start": "node dist/server.js",
-    "postinstall": "prisma generate"
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -31,9 +31,10 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.8",
-    "@types/node": "^22.13.4",
+    "@types/node": "^22.13.12",
     "prisma": "^6.4.0",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2"
   }
 }

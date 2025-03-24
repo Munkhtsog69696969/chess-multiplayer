@@ -7,10 +7,17 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "./src",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "paths": {
       "@src/*": ["*"]
     },
-    "typeRoots": ["./src/typings","./node_modules/@types"]
+    "typeRoots": ["./src/typings","./node_modules/@types"],
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*.ts", "src/types/*.ts"]
+  "include": ["src/**/*.ts", "src/types/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

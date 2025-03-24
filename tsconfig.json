@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["*"]
+    },
+    "typeRoots": ["./src/typings","./node_modules/@types"]
+  },
+  "include": ["src/**/*.ts", "src/types/*.ts"]
+}

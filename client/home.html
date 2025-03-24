@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="./socket/socketInitialize.js"></script>
+    <script src="./js/home.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-half">
+            <div class="notification-container" id="notification-container"></div>
+            <div class="buttons">
+                <button id="play-button">Play</button>
+                <button id="friends-button">Friends</button>
+                <button id="profile-button">Profile</button>
+            </div>
+        </div>
+        <div class="right-half">
+            <div class="image">
+                <img src="./assets/chess.jpg" alt="Chessboard">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

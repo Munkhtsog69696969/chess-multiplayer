@@ -2,17 +2,12 @@ services:
   - type: web
     name: chess-multiplayer
     env: node
-    buildCommand: npm ci
+    buildCommand: npm ci && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: "3001"
       - key: DATABASE_URL
         sync: false
-    buildFilter:
-      paths:
-      - src/**/*.ts
-      - prisma/**/*
-      - package.json
-      - package-lock.json
-      - tsconfig.json

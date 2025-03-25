@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "db:reset": "prisma migrate reset --force",
-    "db:deploy": "prisma migrate deploy",
+    "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" src/server.ts",
+    "build": "tsc",
     "start": "node dist/server.js",
-    "build": "tsc && prisma generate",
-    "postinstall": "prisma generate && prisma migrate reset --force && prisma migrate deploy"
+    "postinstall": "npm run build && prisma generate && prisma migrate reset --force && prisma migrate deploy"
   },
   "keywords": [],
   "author": "",

@@ -9,3 +9,10 @@ services:
         value: production
       - key: DATABASE_URL
         sync: false
+    buildFilter:
+      paths:
+      - src/**/*.ts
+      - prisma/**/*
+      - package.json
+      - package-lock.json
+      - tsconfig.json
